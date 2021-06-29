@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
  
-void swap(int *x, int *y) 
+void swap(int *x, int *y) // SWAP FUNCTION
 { 
     int temp = *x; 
     *x = *y; 
@@ -13,10 +13,10 @@ void Sort(int arr[], int n)
     int i, j; 
     for (i = 0; i < n-1; i++)     
     for (j = 0; j < n-i-1; j++) 
-        if (arr[j] > arr[j+1]) 
-            swap(&arr[j], &arr[j+1]); 
+        if (arr[j] > arr[j+1]) // COMPARING ADJACENT ELEMENTS
+            swap(&arr[j], &arr[j+1]); // SWAPPING IF ADJACENT ELEMENT IS GREATER
 } 
-void printArray(int arr[], int size) 
+void printArray(int arr[], int size) //FUNCTION TO PRINT ARRAY
 { 
     int i; 
     for (i = 0; i < size; i++) 
@@ -36,7 +36,7 @@ int main()
       cin>>arr[i];
    }
    cout<<endl;
-    Sort(arr, n); 
+    Sort(arr, n); //CALLING BUBBLE SORT FUNCTION
     cout<<"Sorted array: \n"; 
     printArray(arr, n); 
     delete[] arr;
