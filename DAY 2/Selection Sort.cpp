@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void swap(int *a, int *b) {
+void swap(int *a, int *b) { // SWAP FUNCTION
   int temp = *a;
   *a = *b;
   *b = temp;
@@ -15,7 +15,7 @@ void printArray(int array[], int size) {
   cout << endl;
 }
 
-void selectionSort(int array[], int size) {
+void selectionSort(int array[], int size) { 
   for (int step = 0; step < size - 1; step++) {
     int min_idx = step;
     for (int i = step + 1; i < size; i++) {
@@ -23,7 +23,7 @@ void selectionSort(int array[], int size) {
         min_idx = i;
     }
 
-    swap(&array[min_idx], &array[step]);
+    swap(&array[min_idx], &array[step]);// SWAPPING THE ELEMENTS
   }
 }
 int main() 
@@ -38,9 +38,9 @@ int main()
       cin>>arr[i];
    }
    cout<<endl;
-    selectionSort(arr, n); 
+    selectionSort(arr, n); //CALLING SELECTION SORT FUNCTION
     cout<<"Sorted array: \n"; 
-    printArray(arr, n); 
+    printArray(arr, n); // PRINTING SORTED ARRAY
     delete[] arr;
     return 0; 
 }
